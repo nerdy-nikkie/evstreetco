@@ -18,16 +18,17 @@ export const BRAND = {
   city: 'Chicago, IL',
 
   /** OPEN 9 — replace before launch. Needs an @ the new EV Street Co domain once it is registered. */
-  email: 'hello@arclightcurb.com' as string | null,
+  email: 'info@evstreetco.com' as string | null,
 
   /** OPEN — $4k installs do not close on a form alone. */
-  phone: null as string | null,
+  phone: '773-234-4394' as string | null,
 
 
   /** Claim the handles before linking them. An icon pointing at an empty profile is worse than no icon. */
   social: {
-    instagram: null as string | null,
-    linkedin: null as string | null,
+    instagram: 'https://instagram.com/evstreetco' as string | null,
+    linkedin: 'https://linkedin.com/company/evstreetco' as string | null,
+    x: 'https://x.com/evstreetco' as string | null,
   },
 } as const;
 

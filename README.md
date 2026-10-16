@@ -34,13 +34,13 @@ This site is not finished. Several facts it needs are still unresolved, and rath
 inventing plausible values they are `null` in `src/brand.ts` and render as visible amber
 "TBD" chips on the page. That is deliberate, so an unfinished claim cannot ship by accident.
 
-Still unset: contractor licence number, contact email, phone, warranty terms, insurance,
-payout schedule, and the estimate form endpoint. The privacy policy and terms of service are
-drafts and say so at the top of each page.
+<!-- Still unset: contractor licence number, -->
+Still unset: phone, warranty terms, insurance, and payout schedule. The privacy policy and
+terms of service are drafts and say so at the top of each page.
 
-**The estimate form is intentionally disabled** until `FORM_ENDPOINT` is set in
-`src/brand.ts`. A form that posts nowhere loses leads silently, so the button is disabled and
-the page says why.
+The estimate form is live. It posts to Web3Forms through `FORM_ENDPOINT` and `FORM_ACCESS_KEY`
+in `src/brand.ts`. If either is cleared, the button is disabled on purpose, because a form
+that posts nowhere loses leads silently.
 
 ## Where things live
 

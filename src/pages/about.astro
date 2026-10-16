@@ -3,7 +3,13 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Image from '~/components/common/Image.astro';
+import Tbd from '~/components/Tbd.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
 import { getPermalink } from '~/utils/permalinks';
+import heathPhoto from '~/assets/images/heath.jpg';
+import founderPlaceholder from '~/assets/images/founder-placeholder.svg';
 
 const metadata = {
   title: 'About',
@@ -18,16 +24,13 @@ const metadata = {
   <Content>
     <Fragment slot="content">
       <p class="text-lg">
-        I run a contracting business in Chicago, and over the past few years of owning an EV in the city, I ran into the
-        same problem again and again: there was nowhere easy to charge. I'd either head to an overcrowded charging
-        station, plan my night around charging at 1 a.m. when no one else was around, or white-knuckle it home hoping I
-        wouldn't run out of charge. The charging infrastructure just wasn't there, and I quickly learned I wasn't the
-        only one feeling it. If you didn't have a garage, you were largely out of luck.
+        Owning an EV in Chicago means a lot of guesswork about where to charge. Public stations fill up, late-night
+        charging is a gamble, and without a garage the options are few. We started EV Street Co to change that.
       </p>
       <p class="mt-4 text-lg">
-        That's why we started building a different model: one where the property owner owns the charging station at the
-        curb, sets their own price, and gets paid every time someone plugs in. We install it, we keep the payments
-        working, and we take a dollar a session plus ten percent. That is the entire business.
+        Our model is simple. The property owner owns the charging station at the curb, sets their own price, and earns
+        every time someone plugs in. We install it, keep the payments running, and take a dollar a session plus ten
+        percent. That is the entire business.
       </p>
       <p class="mt-4 text-lg">
         We are not a charging network. We do not want to own equipment on your property or lock you into a ten-year site
@@ -35,6 +38,40 @@ const metadata = {
       </p>
     </Fragment>
   </Content>
+
+  <WidgetWrapper id="founders" containerClass="max-w-7xl mx-auto">
+    <Headline title="The people behind EV Street Co" tagline="Founders" />
+
+    <div class="mx-auto mt-10 grid max-w-4xl gap-10 sm:grid-cols-2">
+      <div class="text-center">
+        <Image
+          src={heathPhoto}
+          alt="Heath, co-founder of EV Street Co"
+          layout="constrained"
+          class="mx-auto w-full max-w-xs rounded-lg shadow-sm"
+        />
+        <p class="mt-5 font-heading text-xl font-bold">Heath</p>
+        <p class="text-muted">Founder</p>
+        <p class="mt-3 text-base">
+          <Tbd label="short bio" />
+        </p>
+      </div>
+
+      <div class="text-center">
+        <Image
+          src={founderPlaceholder}
+          alt="Placeholder photo for Nico, co-founder of EV Street Co"
+          layout="constrained"
+          class="mx-auto w-full max-w-xs rounded-lg shadow-sm"
+        />
+        <p class="mt-5 font-heading text-xl font-bold">Nico</p>
+        <p class="text-muted">Co-founder</p>
+        <p class="mt-3 text-base">
+          <Tbd label="short bio" />
+        </p>
+      </div>
+    </div>
+  </WidgetWrapper>
 
   <Content
     isReversed
